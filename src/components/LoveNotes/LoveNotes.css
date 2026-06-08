@@ -39,6 +39,7 @@
 .note {
   height: 120px;
   background: white;
+  border: 3px #d98aa8 dotted;
   border-radius: 24px;
   display: flex;
   justify-content: center;
@@ -66,11 +67,12 @@
 .note.open {
   min-height: 220px;
   padding: 1.5rem;
+  border: 3px #d98aa8 dotted;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #d8d4d4, #f8ccdf);
+  background: linear-gradient(135deg, #fdebeb, #e4dee1);
   border: none;
   box-shadow: 0 15px 35px rgba(227, 108, 157, 0.12);
 }
@@ -93,8 +95,8 @@
 }
 
 .note.open p {
-  color: #8f7581;
-  line-height: 1.7;
+  color: #53494e;
+  line-height: 1.5;
   font-size: 0.85rem;
   max-width: 220px;
   animation: revealText 0.7s ease;

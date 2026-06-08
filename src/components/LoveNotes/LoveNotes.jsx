@@ -19,7 +19,7 @@ function LoveNotes() {
     {
       question: "If you were a star",
       answer: "The brightest",
-      note: "You make every dark night better.",
+      note: "You make every night better.",
     },
 
     {
