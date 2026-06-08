@@ -98,10 +98,7 @@ function Hero() {
         ))}
       </motion.div>
 
-      <p className="tap-text">
-        {" "}
-        {isLoved ? "forever yours ❤️" : "tap the heart ♡"}
-      </p>
+      <p className="tap-text"> {isLoved ? "forever yours ❤️" : ""}</p>
       <span className="hero-doodle flower-1">✿</span>
       <span className="hero-doodle flower-2">✿</span>
 
