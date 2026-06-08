@@ -1,0 +1,250 @@
+.letter-section {
+  position: relative;
+
+  background: radial-gradient(circle at top, #fefbfb, #f8f3f4);
+
+  padding: 7rem 1.25rem;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+/* =========================
+   Header
+========================= */
+
+.letter-subtitle {
+  display: block;
+
+  font-family: "Dancing Script", cursive;
+
+  color: #e684a8;
+
+  font-size: 1.4rem;
+
+  margin-bottom: 1rem;
+}
+
+.letter-title {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(3rem, 8vw, 5rem);
+
+  font-style: italic;
+
+  color: #2f2034;
+
+  margin-bottom: 4rem;
+}
+
+/* =========================
+   Paper
+========================= */
+
+.paper {
+  position: relative;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border-radius: 8px;
+
+  padding: 3rem;
+
+  text-align: left;
+
+  overflow: hidden;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* notebook lines */
+
+.paper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    transparent,
+    transparent 47px,
+    rgba(236, 190, 206, 0.5) 48px
+  );
+
+  pointer-events: none;
+}
+
+/* pink tape */
+
+.paper::after {
+  content: "";
+
+  position: absolute;
+
+  width: 90px;
+  height: 28px;
+
+  top: -14px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: rgba(230, 132, 168, 0.45);
+
+  backdrop-filter: blur(5px);
+}
+
+/* =========================
+   Doodles
+========================= */
+
+.doodle {
+  position: absolute;
+
+  color: rgba(230, 132, 168, 0.25);
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.flower {
+  top: 25px;
+  left: 20px;
+  font-size: 5rem;
+  animation: floatFlower 8s ease-in-out infinite;
+}
+
+.star {
+  bottom: 25px;
+  right: 20px;
+  font-size: 5rem;
+  animation: floatStar 10s ease-in-out infinite;
+}
+
+/* =========================
+   Letter Text
+========================= */
+
+.paper h3 {
+  position: relative;
+  z-index: 2;
+
+  font-family: "Dancing Script", cursive;
+
+  color: #e684a8;
+
+  font-size: 2.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.letter-content {
+  position: relative;
+  z-index: 2;
+}
+
+.letter-content p {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: #5d4a55;
+  font-size: 1.45rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.signature {
+  font-style: italic;
+
+  color: #8a6b78;
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes floatFlower {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(10deg) translateY(-10px);
+  }
+}
+
+@keyframes floatStar {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-10deg) translateY(-12px);
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .paper {
+    padding: 2.25rem;
+  }
+
+  .letter-content p {
+    font-size: 1.2rem;
+  }
+
+  .paper h3 {
+    font-size: 2rem;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .letter-section {
+    padding: 5rem 1rem;
+  }
+
+  .letter-title {
+    margin-bottom: 3rem;
+  }
+
+  .paper {
+    padding: 2rem 1.5rem;
+  }
+
+  .paper h3 {
+    font-size: 1.8rem;
+  }
+
+  .letter-content p {
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .flower,
+  .star {
+    font-size: 1.5rem;
+  }
+
+  .paper::after {
+    width: 70px;
+    height: 22px;
+  }
+}
